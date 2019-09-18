@@ -10,8 +10,11 @@ class Article(models.Model):
 	article_text = models.TextField('Текс Статьи')
 	#Тип данных DateTimeField дата время
 	pub_date = models.Date.DateTimeField('Дата Публикации')
-	
+
 #Модель комментария
 class Comment(models.Model):
+	#Прикрепляем коммент к статье используя внешний ключ models.ForeignKey
+	#Каскадное удалении всех комментарие в данной статье on_delete
+	article = models.ForeignKey(Article, on_delete = models.CASCADE)
 	author_name = models.CharField('имя автора',max_length = 50)
 	comment_text = models.CharField('имя автора',max_length = 150)
