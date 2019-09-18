@@ -10,6 +10,8 @@ class Article(models.Model):
 	article_text = models.TextField('Текс Статьи')
 	#Тип данных DateTimeField дата время
 	pub_date = models.Date.DateTimeField('Дата Публикации')
+	
 #Модель комментария
 class Comment(models.Model):
-	pass
+	author_name = models.CharField('имя автора',max_length = 50)
+	comment_text = models.CharField('имя автора',max_length = 150)
