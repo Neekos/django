@@ -9,7 +9,7 @@ class Article(models.Model):
 	#Тип данных Textfield для набора текстов более 255 символов
 	article_text = models.TextField('Текс Статьи')
 	#Тип данных DateTimeField дата время
-	pub_date = models.Date.DateTimeField('Дата Публикации')
+	pub_date = models.DateTimeField('Дата Публикации')
 
 #Модель комментария
 class Comment(models.Model):
