@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #Подключаем приложения для базы данных
+    'articles.apps.ArticlesConfig'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
